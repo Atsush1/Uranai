@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+package 利用者{
+actor ゲスト as g
+actor 登録者 as r
+}
+
+package 占いシステム {
+  usecase "占い" as UC1
+  usecase "ユーザ登録" as UC2
+  usecase "ログイン" as UC3
+  usecase "ポイント利用" as UC4
+}
+
+actor データベース as d
+
+g --> UC1 
+g -- UC2 
+r -- UC3
+r --> UC1
+r -- UC4
+UC1 --> d
+UC2 -- d
+UC3 -- d
+UC4 -- d
+@enduml
