@@ -1,0 +1,14 @@
+@startuml
+
+activate ゲスト
+    note over ゲスト: 
+    ゲスト -> System: 占い結果取得
+
+    activate System
+        System -> System: 占い
+        System -> データベース: 占い結果登録
+    deactivate System
+
+deactivate ゲスト
+
+@enduml

@@ -7,7 +7,7 @@ actor 登録者 as r
 
 package 占いシステム {
   usecase "占い" as UC1
-  usecase "ユーザ登録" as UC2
+  usecase "登録者登録" as UC2
   usecase "ログイン" as UC3
   usecase "ポイント利用" as UC4
 }

@@ -1,0 +1,13 @@
+@startuml
+
+activate ゲスト
+    note over ゲスト: ゲストは登録者登録のための情報をシステムに入力する
+    ゲスト -> System: 登録者登録
+
+    activate System
+        System -> データベース: 登録者登録
+    deactivate System
+
+deactivate ゲスト
+
+@enduml
