@@ -1,0 +1,20 @@
+@startuml
+
+activate 登録者
+    note over 登録者: 
+    登録者 -> System: ポイント使用
+
+    activate System
+        System -> データベース: ポイント減算
+    deactivate System
+
+    登録者 -> System: 占い結果取得
+
+    activate System
+        System -> System: 占い
+        System -> データベース: 占い結果登録
+    deactivate System
+
+deactivate 登録者
+
+@enduml
